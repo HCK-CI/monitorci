@@ -1,9 +1,11 @@
 #![feature(decl_macro)]
 #[macro_use] extern crate rocket;
 
+mod system_info;
+
 #[get("/")]
-fn index() -> &'static str {
-    "Hello world!"
+fn index() -> String {
+    system_info::get_system_info()
 }
 
 #[get("/qemu")]
