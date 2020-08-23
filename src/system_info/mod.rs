@@ -1,14 +1,28 @@
 extern crate sys_info;
 extern crate sysinfo;
 
-use sysinfo::{DiskExt, SystemExt};
+use sysinfo::{DiskExt, ProcessExt, SystemExt};
 
 pub fn get_system_info() -> String {
     format!("Host name: {}", sys_info::hostname().unwrap())
 }
 
 pub fn get_running_qemu_info() -> String {
-    format!("Running QEMU:\n")
+    let mut result = String::from("Running QEMU:\n");
+    let mut system = sysinfo::System::new_all();
+
+    // First we update all information of our system struct.
+    system.refresh_all();
+
+    // Now let's print every process' id and name:
+    for (pid, proccess) in system.get_processes() {
+        if proccess.name().contains("qemu") {
+            result.push_str(&format!("{}:{} => status: {:?}\n",
+                pid, proccess.name(), proccess.status()));
+        }
+    }
+
+    result
 }
 
 pub fn get_running_setup_info() -> String {
