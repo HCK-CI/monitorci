@@ -9,18 +9,18 @@ fn index() -> String {
 }
 
 #[get("/qemu")]
-fn qemu() -> &'static str {
-    "Hello world!"
+fn qemu() -> String {
+    system_info::get_running_qemu_info()
 }
 
 #[get("/setups")]
-fn setups() -> &'static str {
-    "Hello world!"
+fn setups() -> String {
+    system_info::get_running_setup_info()
 }
 
 #[get("/storage")]
-fn storage() -> &'static str {
-    "Hello world!"
+fn storage() -> String {
+    system_info::get_storage_info()
 }
 
 fn main() {
