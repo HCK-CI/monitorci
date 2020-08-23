@@ -17,8 +17,8 @@ pub fn get_running_qemu_info() -> String {
     // Now let's print every process' id and name:
     for (pid, proccess) in system.get_processes() {
         if proccess.name().contains("qemu") {
-            result.push_str(&format!("{}:{} => status: {:?}\n",
-                pid, proccess.name(), proccess.status()));
+            result.push_str(&format!("{:5}: {:?}\n",
+                pid, proccess.cmd()));
         }
     }
 
