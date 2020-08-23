@@ -7,16 +7,13 @@ pub fn get_system_info() -> String {
     format!("Host name: {}", sys_info::hostname().unwrap())
 }
 
-pub fn get_running_qemu_info() -> String {
-    let mut result = String::from("Running QEMU:\n");
+fn print_process_info_by_name(title: &str, pname: &str) -> String {
+    let mut result = String::from(title);
     let mut system = sysinfo::System::new_all();
 
-    // First we update all information of our system struct.
     system.refresh_all();
-
-    // Now let's print every process' id and name:
     for (pid, proccess) in system.get_processes() {
-        if proccess.name().contains("qemu") {
+        if proccess.name().contains(pname) {
             result.push_str(&format!("{:5}: {:?}\n",
                 pid, proccess.cmd()));
         }
@@ -25,8 +22,12 @@ pub fn get_running_qemu_info() -> String {
     result
 }
 
+pub fn get_running_qemu_info() -> String {
+    print_process_info_by_name("Running QEMU:\n", "qemu")
+}
+
 pub fn get_running_setup_info() -> String {
-    format!("Running HCK-CI setups:\n")
+    print_process_info_by_name("Running HCK-CI setups:\n", "auto_hck")
 }
 
 pub fn get_storage_info() -> String {
