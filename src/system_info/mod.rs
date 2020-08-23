@@ -27,7 +27,7 @@ pub fn get_running_qemu_info() -> String {
 }
 
 pub fn get_running_setup_info() -> String {
-    print_process_info_by_name("Running HCK-CI setups:\n", "auto_hck")
+    print_process_info_by_name("Running HCK-CI setups:\n", "ruby")
 }
 
 pub fn get_storage_info() -> String {
