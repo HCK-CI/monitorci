@@ -7,8 +7,8 @@ pub fn get_system_info() -> String {
     sys_info::hostname().unwrap()
 }
 
-fn print_process_info_by_name(title: &str, pname: &str) -> String {
-    let mut result = String::from(title);
+fn print_process_info_by_name(pname: &str) -> String {
+    let mut result = String::new();
     let mut system = sysinfo::System::new_all();
 
     system.refresh_all();
@@ -43,16 +43,16 @@ pub fn get_os_info() -> String {
 }
 
 pub fn get_running_qemu_info() -> String {
-    print_process_info_by_name("Running QEMU:\n", "qemu")
+    print_process_info_by_name("qemu")
 }
 
 pub fn get_running_setup_info() -> String {
-    print_process_info_by_name("Running HCK-CI setups:\n", "ruby")
+    print_process_info_by_name("ruby")
 }
 
 pub fn get_storage_info() -> String {
     let mut system = sysinfo::System::new_all();
-    let mut result = String::from("Storage information:\n");
+    let mut result = String::new();
 
     system.refresh_all();
     for disk in system.get_disks() {

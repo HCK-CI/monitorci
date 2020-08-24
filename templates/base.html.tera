@@ -191,8 +191,50 @@
                             </div>
                             </div>
                         </div>
-                        <!-- Content Row -->
-                        <h1>Storage information</h1>
+                        <!-- End Content Row -->
+
+                        <!-- Content Row - Storage information -->
+                        <div class="row">
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Storage information</h6>
+                                </div>
+                                <div class="card-body">
+                                <p>{{ storage_info }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content Row - Storage information -->
+
+                        <!-- Content Row - Setup information -->
+                        <div class="row">
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Running setup</h6>
+                                </div>
+                                <div class="card-body">
+                                <p>{{ setup_info }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content Row - setup information -->
+
+                        <!-- Content Row - QEMU information -->
+                        <div class="row">
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">QEMU processes</h6>
+                                </div>
+                                <div class="card-body">
+                                <p>{{ qemu_info }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content Row - setup information -->
+
                         <p></p>
                     </div>
                     <!-- End Page Content -->
