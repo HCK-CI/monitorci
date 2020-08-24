@@ -16,10 +16,115 @@
         <!-- Custom styles for this template-->
         <link href="css/sb-admin-2.min.css" rel="stylesheet">
     </head>
-    <body>
-        <div class="container">
-          <h1>System information</h1>
-          <p>{{ host_name }}</p>
+    <body id="page-top">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-binoculars"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">Monitor <sup>CI</sup></div>
+                </a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0">
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+                </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Configuration
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#storage">
+                <i class="fas fa-fw fa-hdd"></i>
+                <span>Storage</span></a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="#hw">
+                <i class="fas fa-fw fa-microchip"></i>
+                <span>HW</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Test setup
+            </div>
+
+            <!-- Nav Item - QEMU processes -->
+            <li class="nav-item">
+                <a class="nav-link" href="#qemu">
+                <i class="fas fa-fw fa-chart-bar"></i>
+                <span>QEMU processes</span></a>
+            </li>
+
+            <!-- Nav Item - auto_hck processes -->
+            <li class="nav-item">
+                <a class="nav-link" href="#auto_hck">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>auto_hck processes</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            </ul>
+            <!-- End of Sidebar -->
+
+
+            <div class="container">
+                <h1>System information</h1>
+                <p>{{ host_name }}</p>
+            </div>
         </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Red Hat Inc 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
     </body>
 </html>
