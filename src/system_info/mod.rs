@@ -4,7 +4,7 @@ extern crate sysinfo;
 use sysinfo::{DiskExt, ProcessExt, SystemExt};
 
 pub fn get_system_info() -> String {
-    format!("Host name: {}", sys_info::hostname().unwrap())
+    sys_info::hostname().unwrap()
 }
 
 fn print_process_info_by_name(title: &str, pname: &str) -> String {
@@ -20,6 +20,26 @@ fn print_process_info_by_name(title: &str, pname: &str) -> String {
     }
 
     result
+}
+
+pub fn get_number_of_cpus() -> String {
+    sys_info::cpu_num().unwrap().to_string()
+}
+
+pub fn get_cpu_speed() -> String {
+    (sys_info::cpu_speed().unwrap() / 1000).to_string()
+}
+
+pub fn get_total_memory_info() -> f64 {
+    sys_info::mem_info().unwrap().total as f64
+}
+
+pub fn get_free_memory_info() -> f64 {
+    sys_info::mem_info().unwrap().free as f64
+}
+
+pub fn get_os_info() -> String {
+    sys_info::os_release().unwrap().to_string()
 }
 
 pub fn get_running_qemu_info() -> String {

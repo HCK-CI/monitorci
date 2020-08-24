@@ -49,16 +49,15 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="#storage">
-                <i class="fas fa-fw fa-hdd"></i>
-                <span>Storage</span></a>
-            </li>
-
-
-            <li class="nav-item">
                 <a class="nav-link" href="#hw">
                 <i class="fas fa-fw fa-microchip"></i>
                 <span>HW</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#storage">
+                <i class="fas fa-fw fa-hdd"></i>
+                <span>Storage</span></a>
             </li>
 
             <!-- Divider -->
@@ -94,11 +93,113 @@
             </ul>
             <!-- End of Sidebar -->
 
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
 
-            <div class="container">
-                <h1>System information</h1>
-                <p>{{ host_name }}</p>
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Placehoder for Topbar Navbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    </nav>
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <!-- Page Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        </div>
+                        <!-- End Page Heading -->
+
+                        <!-- Content Row -->
+                        <div class="row">
+                            <!-- Storage info -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Server name</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ host_name }}</div>
+                                    </div>
+                                    <div class="col-auto">
+                                    <i class="fas fa-laptop fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Number of CPUs</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ number_of_cpus }}</div>
+                                    </div>
+                                    <div class="col-auto">
+                                    <i class="fas fa-microchip fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Memory</div>
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Total: {{ total_memory }}GB</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Free: {{ free_memory }}GB</div>
+                                        </div>
+                                        <div class="col">
+                                        <div class="progress progress-sm mr-2">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: {{ free_memory_ratio }}%" aria-valuenow="{{ free_memory_ratio }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-auto">
+                                    <i class="fas fa-memory fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Pending Requests Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">OS Info</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ os_info }}</div>
+                                    </div>
+                                    <div class="col-auto">
+                                    <i class="fas fa-atom fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Content Row -->
+                        <h1>Storage information</h1>
+                        <p></p>
+                    </div>
+                    <!-- End Page Content -->
+                </div>
+                <!-- End Main Content -->
             </div>
+            <!-- End Content Wrapper -->
         </div>
         <!-- End of Page Wrapper -->
 
