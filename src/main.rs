@@ -36,6 +36,7 @@ fn main() {
     rocket::ignite()
         .mount("/vendor", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/www/vendor")))
         .mount("/css", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/www/css")))
+        .mount("/js", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/www/js")))
         .mount("/", routes![index, qemu, setups, storage])
         .attach(Template::fairing())
         .launch();
