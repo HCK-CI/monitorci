@@ -14,7 +14,7 @@ fn print_process_info_by_name(pname: &str) -> String {
     system.refresh_all();
     for (pid, proccess) in system.get_processes() {
         if proccess.name().contains(pname) {
-            result.push_str(&format!("{:5}: {:?}\n",
+            result.push_str(&format!("{:5}: {:?}\n\n",
                 pid, proccess.cmd()));
         }
     }
@@ -56,7 +56,7 @@ pub fn get_storage_info() -> String {
 
     system.refresh_all();
     for disk in system.get_disks() {
-        result.push_str(&format!("Name: {:?}, Mount point: {:?}, Available/Total {}G/{}G\n",
+        result.push_str(&format!("Name: {:?}, Mount point: {:?}, Available/Total {}G/{}G\n\n",
             disk.get_name(), disk.get_mount_point(),
             disk.get_available_space() / 1000000000, disk.get_total_space() / 1000000000));
     }

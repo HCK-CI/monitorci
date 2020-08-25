@@ -203,7 +203,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">Storage information</h6>
                                 </div>
                                 <div class="card-body">
-                                <p>{{ storage_info }}</p>
+                                <p><pre>{{ storage_info }}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +218,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">Running setup</h6>
                                 </div>
                                 <div class="card-body">
-                                <p>{{ setup_info }}</p>
+                                    <p><pre>{{ setup_info }}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">QEMU processes</h6>
                                 </div>
                                 <div class="card-body">
-                                <p>{{ qemu_info }}</p>
+                                <p><pre>{{ qemu_info }}</pre></p>
                                 </div>
                             </div>
                         </div>
