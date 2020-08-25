@@ -26,27 +26,12 @@ fn index() -> Template {
     Template::render("base", &context.into_json())
 }
 
-#[get("/qemu")]
-fn qemu() -> String {
-    system_info::get_running_qemu_info()
-}
-
-#[get("/setups")]
-fn setups() -> String {
-    system_info::get_running_setup_info()
-}
-
-#[get("/storage")]
-fn storage() -> String {
-    system_info::get_storage_info()
-}
-
 fn main() {
     rocket::ignite()
         .mount("/vendor", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/www/vendor")))
         .mount("/css", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/www/css")))
         .mount("/js", StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/www/js")))
-        .mount("/", routes![index, qemu, setups, storage])
+        .mount("/", routes![index])
         .attach(Template::fairing())
         .launch();
 }
