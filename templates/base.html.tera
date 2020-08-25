@@ -7,7 +7,7 @@
         <meta name="description" content="Monitor CI Dashboard">
         <meta name="author" content="Daynix Computing LTD">
 
-        <title>Monitor CI</title>
+        <title>Monitor CI - {{ host_name }}</title>
 
         <!-- Custom fonts for this template-->
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -68,18 +68,18 @@
                 Test setup
             </div>
 
-            <!-- Nav Item - QEMU processes -->
-            <li class="nav-item">
-                <a class="nav-link" href="#qemu">
-                <i class="fas fa-fw fa-chart-bar"></i>
-                <span>QEMU processes</span></a>
-            </li>
-
             <!-- Nav Item - auto_hck processes -->
             <li class="nav-item">
                 <a class="nav-link" href="#auto_hck">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>auto_hck processes</span></a>
+            </li>
+
+            <!-- Nav Item - QEMU processes -->
+            <li class="nav-item">
+                <a class="nav-link" href="#qemu">
+                <i class="fas fa-fw fa-chart-bar"></i>
+                <span>QEMU processes</span></a>
             </li>
 
             <!-- Divider -->
