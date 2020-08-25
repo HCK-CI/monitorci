@@ -112,6 +112,7 @@
                         <!-- End Page Heading -->
 
                         <!-- Content Row -->
+                        <a id="hw"></a>
                         <div class="row">
                             <!-- Storage info -->
                             <div class="col-xl-3 col-md-6 mb-4">
@@ -194,6 +195,7 @@
                         <!-- End Content Row -->
 
                         <!-- Content Row - Storage information -->
+                        <a id="storage"></a>
                         <div class="row">
                             <!-- Approach -->
                             <div class="card shadow mb-4">
@@ -208,6 +210,7 @@
                         <!-- End Content Row - Storage information -->
 
                         <!-- Content Row - Setup information -->
+                        <a id="auto_hck"></a>
                         <div class="row">
                             <!-- Approach -->
                             <div class="card shadow mb-4">
@@ -222,6 +225,7 @@
                         <!-- End Content Row - setup information -->
 
                         <!-- Content Row - QEMU information -->
+                        <a id="qemu"></a>
                         <div class="row">
                             <!-- Approach -->
                             <div class="card shadow mb-4">
