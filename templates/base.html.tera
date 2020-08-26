@@ -82,6 +82,13 @@
                 <span>QEMU processes</span></a>
             </li>
 
+             <!-- Nav Item - ivshmem servers processes -->
+            <li class="nav-item">
+                <a class="nav-link" href="#ivshmem">
+                <i class="fas fa-fw fa-chart-bar"></i>
+                <span>ivshmem processes</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -237,7 +244,22 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Content Row - setup information -->
+                        <!-- End Content Row - QEMU information -->
+
+                        <!-- Content Row - ivshmem servers information -->
+                        <a id="ivshmem"></a>
+                        <div class="row">
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">ivshmem servers processes</h6>
+                                </div>
+                                <div class="card-body">
+                                <p><pre>{{ ivshmem_info }}</pre></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content Row - ivshmem servers information -->
 
                         <p></p>
                     </div>

@@ -7,7 +7,7 @@ pub fn get_system_info() -> String {
     sys_info::hostname().unwrap()
 }
 
-fn print_process_info_by_name(pname: &str) -> String {
+pub fn get_process_info_by_name(pname: &str) -> String {
     let mut result = String::new();
     let mut system = sysinfo::System::new_all();
 
@@ -40,14 +40,6 @@ pub fn get_free_memory_info() -> f64 {
 
 pub fn get_os_info() -> String {
     sys_info::os_release().unwrap().to_string()
-}
-
-pub fn get_running_qemu_info() -> String {
-    print_process_info_by_name("qemu")
-}
-
-pub fn get_running_setup_info() -> String {
-    print_process_info_by_name("ruby")
 }
 
 pub fn get_storage_info() -> String {

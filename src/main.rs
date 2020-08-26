@@ -19,8 +19,9 @@ fn index() -> Template {
     context.insert("total_memory", &(system_info::get_total_memory_info() / 1_000_000.0));
     context.insert("free_memory", &(system_info::get_free_memory_info() / 1_000_000.0));
     context.insert("storage_info", &system_info::get_storage_info());
-    context.insert("setup_info", &system_info::get_running_setup_info());
-    context.insert("qemu_info", &system_info::get_running_qemu_info());
+    context.insert("setup_info", &system_info::get_process_info_by_name("ruby"));
+    context.insert("qemu_info", &system_info::get_process_info_by_name("qemu"));
+    context.insert("ivshmem_info", &system_info::get_process_info_by_name("ivshmem-server"));
 
     // Where `base` is the name of the template
     Template::render("base", &context.into_json())
