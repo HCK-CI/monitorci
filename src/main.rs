@@ -23,6 +23,7 @@ fn index() -> Template {
     context.insert("setup_info", &system_info::get_process_info_by_name("ruby"));
     context.insert("qemu_info", &system_info::get_process_info_by_name("qemu"));
     context.insert("ivshmem_info", &system_info::get_process_info_by_name("ivshmem-server"));
+    context.insert("bridge_info", &brctl::get_bridges());
 
     // Where `base` is the name of the template
     Template::render("base", &context.into_json())

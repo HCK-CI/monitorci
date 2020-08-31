@@ -60,6 +60,12 @@
                 <span>Storage</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="#bridges">
+                <i class="fas fa-fw fa-hdd"></i>
+                <span>Network bridges</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -260,6 +266,21 @@
                             </div>
                         </div>
                         <!-- End Content Row - ivshmem servers information -->
+
+                        <!-- Content Row - bridge information -->
+                        <a id="bridges"></a>
+                        <div class="row">
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Network bridges</h6>
+                                </div>
+                                <div class="card-body">
+                                <p><pre>{{ bridge_info }}</pre></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content Row - bridge information -->
 
                         <p></p>
                     </div>
