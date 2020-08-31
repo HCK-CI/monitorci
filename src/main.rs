@@ -7,6 +7,7 @@ use rocket_contrib::templates::Template;
 use rocket_contrib::serve::StaticFiles;
 use tera::Context;
 mod system_info;
+mod brctl;
 
 #[get("/")]
 fn index() -> Template {
