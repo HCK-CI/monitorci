@@ -216,7 +216,11 @@
                                 <h6 class="m-0 font-weight-bold text-primary">Storage information</h6>
                                 </div>
                                 <div class="card-body">
-                                <p><pre>{{ storage_info }}</pre></p>
+                                <ul>
+                                {% for disk in storage_info %}
+                                    <li>{{ disk }}</li>
+                                {% endfor %}
+                                </ul>
                                 </div>
                             </div>
                         </div>
